@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Antrian;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AntrianController extends Controller
 {
@@ -14,7 +15,7 @@ class AntrianController extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
 
     /**
@@ -35,7 +36,20 @@ class AntrianController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        $this->data['nama'] = $request->nama;
+//        $this->data['nama_perusahaan'] = $request->nama_perusahaan;
+//        $this->data['layanan_id'] = $request->layanan_id;
+        $this->data['nomor_antrian'] =Antrian::wherelayanan_id($id)->get(1);
+        $this->data['layanan_id'] =Antrian::orderBy('created_at', 'desc');
+        if ($this->data=null){
+            $nomor_antrian=1;
+        }else{
+            
+        }
+
+        dd($this->data);
+//        Antrian::create($this->data);
+//        return redirect(route('front.index'))->with(['success' => 'berhasil di ambil']);
     }
 
     /**
