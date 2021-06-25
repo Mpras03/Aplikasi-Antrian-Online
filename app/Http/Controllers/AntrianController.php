@@ -63,8 +63,7 @@ class AntrianController extends Controller
     public function show($id)
     {
         $antrian = Antrian::find($id);
-        dd($antrian);
-        return view('nomorAntrian');
+        return view('nomorAntrian', compact('antrian'));
 
     }
 

@@ -97,20 +97,10 @@
                     <div class="sidebar-heading">Akun</div>
                     <ul class="sidebar-menu mt-0">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{ route('register') }}">
-                                <span class="sidebar-menu-icon sidebar-menu-icon--left">
-                                  <!-- Tempate ICON -->
-                                </span>
-                                <span class="sidebar-menu-text">Daftar</span>
-                            </a>
+
                         </li>
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{ route('login') }}">
-                                <span class="sidebar-menu-icon sidebar-menu-icon--left">
-                                  <!-- Tempate ICON -->
-                                </span>
-                                <span class="sidebar-menu-text">Masuk</span>
-                            </a>
+
                         </li>
                     </ul>
                 </div>
