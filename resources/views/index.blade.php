@@ -21,7 +21,7 @@
         </div>
         <div class="col-lg-6 card-form__body">
             <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values="[&quot;judul&quot;,&quot;ketua&quot;,&quot;bidang&quot;,&quot;tanggal&quot;,&quot;status&quot;]">
-                <form method="post" action="{{route('antrian-store')}}" >
+                <form method="post" action="{{route('antrian.store')}}" >
                     @csrf
                     <label>Nama</label>
                     <div class="form--light m-3">
@@ -34,7 +34,9 @@
                     <label>Layanan</label>
                     <div class="form--light m-3">
                         <select class="form-control" name="layanan_id">
-                            <option value="1">Import</option>
+                            @foreach($layanan as $item)
+                            <option value='{{$item -> id}}'>{{$item -> nama_layanan}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <input type="submit" class="btn btn-success">

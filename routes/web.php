@@ -14,4 +14,5 @@ use App\Http\Controllers\AntrianController;
 */
 
 Route::get('/',[ AntrianController::class, "index" ])->name('front.index');
-Route::post('/tambah-antrian',[AntrianController::class,'store'])->name('antrian-store');
+Route::post('/tambah-antrian',[AntrianController::class,'store'])->name('antrian.store');
+Route::get('/nomor-antrian/{id}',[AntrianController::class, 'show'])->name('antrian.show');
