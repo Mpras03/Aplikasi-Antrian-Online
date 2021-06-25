@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Antrian;
 use App\Models\Layanan;
+use PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -21,6 +22,16 @@ class AntrianController extends Controller
         return view('index',compact('layanan'));
     }
 
+
+    public function cetak_pdf(){
+        $antrian = Antrian::whereDate('created_at',Carbon::today())->orderBy('created_at','desc')->first();
+        $pdf = PDF::loadview('antrianPdf', ['antrian' => $antrian ]);
+//        dd($pdf);
+        return $pdf->stream();
+        return $pdf->download('antrian-pdf');
+
+//        return view('antrianPdf',compact('antrian'));
+    }
     /**
      * Show the form for creating a new resource.
      *

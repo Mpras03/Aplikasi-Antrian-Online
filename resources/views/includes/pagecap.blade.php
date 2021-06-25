@@ -10,10 +10,10 @@
                     <a href="{{route('front.index')}}" class="flex d-flex align-items-center text-underline-0">
                         <span class="mr-1  text-white">
                             <!-- LOGO -->
-                            <img src="{{ asset('image/logo_white_emblem.png') }}" height="40px">
+                            <img src="{{ asset('template/images/logos/kkp.png') }}" height="40px">
                         </span>
                         <span class="flex d-flex flex-column text-white">
-                            <strong class="sidebar-brand">{{config('app.name')}}</strong>
+                            <strong class="sidebar-brand">Aplikasi Antrian Online</strong>
                         </span>
                     </a>
                 </div>

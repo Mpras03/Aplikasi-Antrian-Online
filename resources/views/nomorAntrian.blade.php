@@ -21,7 +21,7 @@
                     {{$antrian -> nomor_antrian}}
                 </h1>
                 <h4>Jenis layanan anda {{$antrian -> layanan -> nama_layanan}}</h4>
-                <a href="{{}}" class="btn btn-success">Cetak nomor antrian</a>
+                <a href="{{route('antrian.pdf')}}" class="btn btn-success">Cetak nomor antrian</a>
             </div>
             <div class="col-lg-6 card-form__body">
                 <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values="[&quot;judul&quot;,&quot;ketua&quot;,&quot;bidang&quot;,&quot;tanggal&quot;,&quot;status&quot;]">
