@@ -36,7 +36,7 @@
     <header>
         <div>
             <img src="template/images/logos/kkp.png" height="100px" align="left" style="margin: 10px">
-            <img src="template/images/logos/bikpm.png" height="110px" align="right" style="margin: 10px">
+            <img src="template/images/logos/bkipm.png" height="110px" align="right" style="margin: 10px">
             <h3 id=judul>ONLINE BOOKING PELAYANAN <br> BALAI KIPM SURABAYA II</h3>
 
         </div>
