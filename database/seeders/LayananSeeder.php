@@ -13,7 +13,7 @@ class LayananSeeder extends Seeder
      */
     public function run()
     {
-        $layanan = ['','Import','Export','Domestik Masuk','Domestik Keluar'];
+        $layanan = ['','Import','Export','Domestik Masuk','Domestik Keluar','Customer Service'];
         foreach($layanan as $key => $item){
             Layanan::updateOrCreate([
                 'id' => $key

@@ -45,6 +45,14 @@ class AntrianSeeder extends Seeder
             'layanan_id' => '4',
             'nomor_antrian' => '4'
         ]);
+        Antrian::updateOrCreate([
+            'id' => 5
+        ],[
+            'nama' => 'haidar1',
+            'nama_perusahaan' => 'rpl',
+            'layanan_id' => '5',
+            'nomor_antrian' => '5'
+        ]);
 
 
     }
