@@ -12,7 +12,6 @@
             width: auto;
             height: auto;
             position: absolute;
-            border: 1px solid;
             padding-top: 30px;
             padding-left: 30px;
             padding-right: 30px;
