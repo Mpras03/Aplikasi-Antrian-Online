@@ -20,7 +20,7 @@
                 @if (Route::has('login'))
                     @auth
                     <ul class="ml-auto nav navbar-nav mr-2 d-none d-lg-flex">
-                        <li class="nav-item"><a href="{{ route('front.dasbor') }}" class="nav-link">Dasbor</a></li>
+                        <li class="nav-item"><a href="{{ route('dashboard') }}" class="nav-link">Dasbor</a></li>
                     </ul>
 
                     @else
