@@ -17,3 +17,7 @@ Route::get('/',[ AntrianController::class, "index" ])->name('front.index');
 Route::post('/tambah-antrian',[AntrianController::class,'store'])->name('antrian.store');
 Route::get('/nomor-antrian/{id}',[AntrianController::class, 'show'])->name('antrian.show');
 Route::get('/cetak-antrian', [AntrianController::class,'cetak_pdf'])->name('antrian.pdf');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
