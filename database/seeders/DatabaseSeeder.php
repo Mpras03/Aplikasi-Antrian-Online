@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this ->call(LayananSeeder::class);
         $this ->call(AntrianSeeder::class);
+        $this ->call(UserSeeder::class);
     }
 }

@@ -20,12 +20,12 @@
                 @if (Route::has('login'))
                     @auth
                     <ul class="ml-auto nav navbar-nav mr-2 d-none d-lg-flex">
-                        <li class="nav-item"><a href="{{ route('front.dasbor') }}" class="nav-link">Dasbor</a></li>
+                        <li class="nav-item"><a href="{{ route('dashboard') }}" class="nav-link">Dasbor</a></li>
                     </ul>
 
                     @else
                         <ul class="ml-auto nav navbar-nav mr-2 d-none d-lg-flex">
-                            <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Daftar</a></li>
+                            {{-- <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Daftar</a></li> --}}
                         </ul>
                         <div class="dropdown">
                             <a href="{{ route('login') }}" class="navbar-toggler navbar-toggler-dashboard border-left d-flex align-items-center ml-navbar">

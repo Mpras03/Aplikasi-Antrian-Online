@@ -25,7 +25,18 @@ class Antrian extends Model
     /**
      * @var array
      */
-    protected $fillable =['nama', 'nama_perusahaan', 'layanan_id','nomor_antrian'];
+    protected $fillable =['nama', 'nama_perusahaan', 'layanan_id','nomor_antrian','status'];
+
+    /**
+     * Search query in multiple whereOr
+     */
+    public static function search($query)
+    {
+        return empty($query) ? static::query()
+            : static::where('nama', 'like', '%'.$query.'%')
+                ->orWhere('nama_perusahaan', 'like', '%'.$query.'%')
+                ->orWhere('nomor_antrian', 'like', '%'.$query.'%');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
