@@ -6,10 +6,6 @@
             <a href="{{ $data->href->create_new }}"  class="-ml- btn btn-primary shadow-none">
                 <span class="fas fa-plus"></span> {{ $data->href->create_new_text }}
             </a>
-            @else
-            <a wire:click="$emit('showCreateModal')" class="-ml- btn btn-primary shadow-none" data-toggle="modal">
-                <span class="fas fa-plus"></span> {{ $data->href->create_new_text }}
-            </a>
             @endif
             @if (property_exists($data->href, 'export'))
             <a href="{{ $data->href->export }}" class="ml-2 btn btn-success shadow-none">

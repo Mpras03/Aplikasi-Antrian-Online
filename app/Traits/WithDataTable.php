@@ -27,7 +27,24 @@ trait WithDataTable {
                     ])
                 ];
                 break;
+            case 'antrian':
+                $antrians = $this->model::search($this->search)
+                    ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                    ->paginate($this->perPage);
 
+                return [
+                    "view" => 'livewire.table.antrian',
+                    "antrians" => $antrians,
+                    "data" => $this->array_to_object([
+                        'href' => [
+                            // 'create_new' => route('user.new'),
+                            'create_new_text' => 'Buat User',
+                            // 'export' => '#',
+                            'export_text' => 'Export'
+                        ]
+                    ])
+                ];
+                break;
             default:
                 # code...
                 break;

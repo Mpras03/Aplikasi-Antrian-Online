@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AntrianController;
-// use App\Http\Controllers\Admin\AntrianController as AdminAntrianController;
+use App\Http\Controllers\Admin\AntrianController as AdminAntrianController;
 use App\Http\Controllers\Admin\UserController;
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +26,9 @@ Route::group([ "prefix" => 'user',"middleware" => ['auth:sanctum', 'verified'] ]
     Route::view('/edit/{userId}', "user.user-edit")->name('user.edit');
 });
 
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-    Route::get('/', [ AntrianController::class, "index" ])->name('antrian');
+Route::group([ "prefix" => 'antrian',"middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::get('/', [ AdminAntrianController::class, "index" ])->name('antrian');
+    Route::view('/edit/{antrianId}', "antrian.antrian-edit")->name('antrian.edit');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
